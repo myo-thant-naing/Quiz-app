@@ -5,7 +5,7 @@ import ScoreResultCard from "./components/ScoreResultCard";
 import QuestionForm from "./components/QuestionForm";
 
 export default function Quiz() {
-  const [userAnswers, setUserAnswers] = useState<string[]>([]);
+  const [userAnswers, setUserAnswers] = useState<(string | null)[]>([]);
 
   const handleAnswer = (option: string) => {
     setUserAnswers((prev) => [...prev, option]);
@@ -38,6 +38,7 @@ export default function Quiz() {
   useEffect(() => {
     if (showResult) return;
     if (time === 0) {
+      setUserAnswers((prev) => [...prev, null]);
       handleNextQuestion();
       return;
     }

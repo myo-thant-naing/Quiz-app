@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 bg-linear-to-b from-[#D9CEFF] to-[#F3EFFF]">
+    <div className="min-h-screen md:mt-20 flex flex-col items-center justify-center px-4 sm:px-6 bg-linear-to-b from-[#D9CEFF] to-[#F3EFFF]">
       <div
         className="
           w-full max-w-md sm:max-w-2xl
@@ -21,15 +21,16 @@ const Home = () => {
 
         ">
         <h1 className="text-lg sm:text-2xl md:text-3xl font-semibold leading-relaxed text-gray-900 drop-shadow-sm">
-          “မျိုးဆက်သစ် အင်ဂျင်နီယာ မောင်မယ်များအား
+          “ မျိုးဆက်သစ် အင်ဂျင်နီယာ မောင်မယ်များအား
           <br />
           နည်းပညာတက္ကသိုလ်(မိတ္ထီလာ)
           <br />
           <span className="font-bold text-[#6B4CFF] drop-shadow-sm">
-            သုတနည်းပညာဌာနမှ
+            သုတနည်းပညာဌာန
           </span>
+          မှ
           <br />
-          လှိုက်လှဲစွာ ကြိုဆိုပါ၏”
+          လှိုက်လှဲစွာ ကြိုဆိုပါ၏ ”
         </h1>
       </div>
 

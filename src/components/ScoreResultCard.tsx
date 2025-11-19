@@ -15,7 +15,7 @@ const ScoreResultCard = ({
   showAnswers: boolean;
   setShowAnswers: (val: boolean) => void;
   handleReplay: () => void;
-  userAnswers: string[];
+  userAnswers: (string | null)[];
 }) => {
   return (
     <div className="mt-20 text-center">
@@ -36,14 +36,17 @@ const ScoreResultCard = ({
         <div className="text-left space-y-4">
           {questions.map((q, i) => {
             const userAnswer = userAnswers[i];
+
             return (
               <div key={i} className="pb-4 border-b">
                 <p className="font-semibold mb-2">
                   Q{i + 1}. {q.question}
                 </p>
+
                 <div className="grid gap-1 ml-4">
                   {q.options.map((option, idx) => {
                     const isUserChoice = userAnswer === option;
+
                     const bgColor = isUserChoice
                       ? option === q.answer
                         ? "bg-green-100 border border-green-500"
@@ -57,10 +60,13 @@ const ScoreResultCard = ({
                         <span className="font-mono">{`(${String.fromCharCode(
                           97 + idx
                         )})`}</span>
+
                         {option}
+
                         {isUserChoice && option === q.answer && (
                           <FaCheck className="text-green-500 ml-1" />
                         )}
+
                         {isUserChoice && option !== q.answer && (
                           <FaTimes className="text-red-500 ml-1" />
                         )}
@@ -80,9 +86,10 @@ const ScoreResultCard = ({
         className="p-3 bg-green-500 hover:bg-green-600 text-white rounded-xl transition mt-4">
         Replay
       </button>
+
       <Link
         to="/"
-        className="p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition">
+        className="p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition ml-3">
         Home
       </Link>
     </div>
