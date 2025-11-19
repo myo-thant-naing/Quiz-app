@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.padauk-bold {
+  font-family: "Padauk", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+ body {
+       
+        background: linear-gradient(to bottom, #D9CEFF, #F3EFFF);
+    }

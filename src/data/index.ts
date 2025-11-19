@@ -1,5 +1,8 @@
 import type { Question } from "../types/index.types";
 
+export const Uni_Logo = "https://tumeiktila.edu.mm/wp-content/uploads/2020/01/TU_logo.jpg"
+export const IT_Logo =  "https://tumeiktila.edu.mm/wp-content/uploads/2020/01/IT_logo.jpg"
+
 export const allQuestions: Question[] = [
 	{
 		question: "Capital of France?",
