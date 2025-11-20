@@ -18,7 +18,7 @@ export default function LottieAnim() {
 
 		const timer = setTimeout(() => {
 			anim.stop(); //stop animation
-		}, 2000);
+		}, 1000);
 
 		return () => {
 			clearTimeout(timer);
