@@ -1,7 +1,12 @@
-import { Link } from "react-router";
+import { Link, useOutletContext } from "react-router";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
 
 const Home = () => {
+  const { sound } = useOutletContext<{ sound: Howl }>();
+  useEffect(() => {
+    sound.pause();
+  }, []);
   return (
     <div className="min-h-screen md:mt-20 flex flex-col items-center justify-center px-4 sm:px-6 bg-linear-to-b from-[#D9CEFF] to-[#F3EFFF]">
       <div
