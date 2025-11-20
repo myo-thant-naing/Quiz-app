@@ -41,7 +41,7 @@ const QuestionForm = ({
 						<span>
 							{`(${String.fromCharCode(97 + idx)})`} {option}
 						</span>
-						<span className="group-hover:translate-x-0 group-hover:opacity-100 text-green-500 opacity-0 translate-x-1 transition-all duration-300 ease-in">
+						<span className="group-active:opacity-100 group-active:translate-x-0 text-green-500 opacity-0 translate-x-1 transition-all duration-300 ease-in ">
 							<FaCheck />
 						</span>
 					</button>
