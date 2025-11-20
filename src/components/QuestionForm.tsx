@@ -1,3 +1,4 @@
+import { FaCheck } from "react-icons/fa";
 import Timer from "./Timer";
 
 const QuestionForm = ({
@@ -15,12 +16,12 @@ const QuestionForm = ({
 	time: number;
 	handleAnswer: (option: string) => void;
 }) => {
-	const colors = [
-		"bg-red-200",
-		"bg-green-200",
-		"bg-blue-200",
-		"bg-yellow-200",
-	];
+	// const colors = [
+	// 	"bg-red-200",
+	// 	"bg-green-200",
+	// 	"bg-blue-200",
+	// 	"bg-yellow-200",
+	// ];
 	return (
 		<div>
 			<div className="flex justify-between items-center mb-4">
@@ -35,11 +36,14 @@ const QuestionForm = ({
 					<button
 						key={option}
 						onClick={() => handleAnswer(option)}
-						className={`p-3 px-5 ${
-							colors[idx % colors.length]
-						}  rounded-xl transition flex items-center gap-2 cursor-pointer`}
+						className={`group p-3 px-5 rounded-xl transition flex justify-between items-center gap-2 cursor-pointer border-2 border-gray-300 hover:border-2 hover:border-[#A88BFF]`}
 					>
-						{`(${String.fromCharCode(97 + idx)})`} {option}
+						<span>
+							{`(${String.fromCharCode(97 + idx)})`} {option}
+						</span>
+						<span className="group-hover:translate-x-0 group-hover:opacity-100 text-green-500 opacity-0 translate-x-1 transition-all duration-300 ease-in">
+							<FaCheck />
+						</span>
 					</button>
 				))}
 			</div>
